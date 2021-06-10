@@ -1,8 +1,6 @@
 import sys
-
 import os
 import typing
-
 import pathlib
 path_list = str(pathlib.Path(__file__)).split("/")[1:-1][::-1] # take out the first and last element and reverse list
 
@@ -69,20 +67,18 @@ path_to_file_interface:str = find_parent_directory(name='file_interface.py', pat
 sys.path.append(path_to_file_interface)
 
 from file_interface import FileInterface
-import inspect
 
 
 def test_with_file_interface():
 
     CodeInspector.print_class_info(FileInterface)
-
     return None
 
 if __name__ == '__main__':
     try:
         unittest.main(verbosity=2, exit=False)
-        # test_with_file_interface()
-        
+        test_with_file_interface()
+
     finally:
         sys.path.remove(path_to_code_inspector)
         sys.path.remove(path_to_file_interface)
