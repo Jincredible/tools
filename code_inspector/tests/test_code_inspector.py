@@ -78,6 +78,7 @@ if __name__ == '__main__':
     try:
         unittest.main(verbosity=2, exit=False)
         test_with_file_interface()
+        # help(CodeInspector)
 
     finally:
         sys.path.remove(path_to_code_inspector)
