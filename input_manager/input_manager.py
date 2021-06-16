@@ -2,7 +2,8 @@
 import sys
 import re
 
-class InputManager:
+class InputManager(object):
+    """Checks user inputs into console"""
 
     exit_command: str = 'exit'
 
